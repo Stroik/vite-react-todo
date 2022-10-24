@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-700 rounded-md;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-500 rounded-md;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-400;
+}
+
+.content {
+  @apply flex flex-col items-center justify-center w-screen h-screen bg-zinc-900 px-6 overflow-y-hidden;
+}
+.content h1 {
+  @apply text-white text-4xl my-4 mb-auto pb-4;
+}
+.todo-list {
+  @apply flex flex-col md:w-1/2 w-full bg-zinc-800 rounded-lg p-4 overflow-y-auto;
+}
+
+.todo-list li {
+  @apply flex items-center justify-between p-4 my-2 bg-white rounded shadow cursor-pointer hover:bg-zinc-600 hover:text-white z-10;
+}
+
+.todo-list li button {
+  @apply bg-red-500 text-white rounded-full w-6 h-6 text-xs flex flex-col items-center justify-center;
+}
+
+.todo-list li span {
+  @apply w-full;
+}
+
+.new-todo {
+  @apply flex items-center justify-between my-4 bg-white rounded-md shadow cursor-pointer hover:text-white z-10 md:w-1/2 w-full;
+}
+
+.new-todo input {
+  @apply bg-transparent border-none outline-none text-gray-800 text-lg p-4 w-3/4;
+}
+
+.new-todo button {
+  @apply bg-zinc-800 h-full w-1/4 rounded rounded-l-none text-white hover:opacity-90;
+}
